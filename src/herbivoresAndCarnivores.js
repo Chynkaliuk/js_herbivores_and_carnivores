@@ -34,9 +34,9 @@ class Carnivore extends Animal {
   // The constructor is removed as it is redundant
 
   bite(herbivore) {
-    if (!(herbivore instanceof Carnivore) && herbivore.hidden !== true) {
+    if (herbivore instanceof Herbivore && !herbivore.hidden) {
       herbivore.health -= 50;
-      herbivore.checkHealth(); // Перевіряємо здоров'я після укусу
+      herbivore.checkHealth();
     }
   }
 }
